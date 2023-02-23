@@ -1,0 +1,9 @@
+.vscode/
+audio/
+gui/
+images/
+saves/
+tl/
+*.rpyc
+Scripts/*.rpyc
+cache/
