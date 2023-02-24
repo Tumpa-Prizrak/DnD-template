@@ -3,6 +3,11 @@ init -999 python:
     import re
 
     def roll_dice(formula: str):
+        """
+            Бросает дайсы и возвращает значение по формуле
+
+            formula: str - Математическое выражение содержащее нотацию броска в виде [количество дайсов]d<количество граней>
+        """
         replacer = re.compile("\d*d\d+")
 
         while True:
@@ -11,8 +16,8 @@ init -999 python:
             
             count, sides = map(int, enter[0].split('d'))
 
-            count = 1 if count == '' else count
+            count = 1 if count == '' else count # Если количество дайсов не указано, то считается, что бросается один дайс
 
-            formula = formula.replace(enter[0], randint(count, sides * count))
+            formula = formula.replace(enter[0], randint(count, sides * count)) # Заменяем нотацию на число
 
-        return eval(formula)
+        return eval(formula) # Выполняем выражение

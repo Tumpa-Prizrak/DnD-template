@@ -2,6 +2,10 @@ init -900 python:
     from enum import Enum, auto
 
     class DamageTypes(Enum):
+        """|Enum|
+
+        Типы урона
+        """
         Crushing = auto() # 1 Дробящий
         Sound = auto() # 2 Звуковой
         Radiation = auto() # 3 Излучением
@@ -17,6 +21,10 @@ init -900 python:
         Poisonous = auto() # 13 Ядом
 
     class States(Enum):
+        """ |Enum|
+        
+        Состояния
+        """
         Unconscious = auto() # 1 Бессознательный
         Scared = auto() # 2 Испуганый
         Invisible = auto() # 3 Невидимый
